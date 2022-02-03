@@ -10,7 +10,6 @@ app = Flask(__name__)
 # Make the WSGI interface available at the top level so wfastcgi can get it.
 wsgi_app = app.wsgi_app
 
-
 @app.route('/')
 def hello():
     """Renders a sample page."""
@@ -23,4 +22,8 @@ if __name__ == '__main__':
         PORT = int(os.environ.get('SERVER_PORT', '5555'))
     except ValueError:
         PORT = 5555
+
+    from views import game_page
+    app.register_blueprint(game_page.bp)
+
     app.run(HOST, PORT)

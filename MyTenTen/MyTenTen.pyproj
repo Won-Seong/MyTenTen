@@ -28,9 +28,35 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
+    <Compile Include="DB_Info.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="views\game_page.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\PublishProfiles\MyTenTen20220201033715 - Web Deploy.pubxml" />
+    <Content Include="templates\two_four_zero_eight.html" />
+    <None Include="Properties\PublishProfiles\SeongWonGame - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\SeongWonGame - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\SeongWonGame - FTP1.pubxml" />
+    <None Include="Properties\PublishProfiles\SeongWonGame - Web Deploy1.pubxml" />
+    <None Include="Properties\PublishProfiles\SeongWonGame - FTP2.pubxml" />
+    <None Include="Properties\PublishProfiles\SeongWonGame - Web Deploy2.pubxml" />
+    <None Include="Properties\PublishProfiles\SeongWonGame - FTP3.pubxml" />
+    <None Include="Properties\PublishProfiles\SeongWonGame - Web Deploy3.pubxml" />
+    <None Include="Properties\PublishProfiles\SeongWonGame - FTP4.pubxml" />
+    <None Include="Properties\PublishProfiles\SeongWonGame - Web Deploy4.pubxml" />
+    <None Include="Properties\PublishProfiles\SeongWonGame - FTP5.pubxml" />
+    <None Include="Properties\PublishProfiles\SeongWonGame - Web Deploy5.pubxml" />
+    <None Include="Properties\PublishProfiles\SeongWonGame - FTP6.pubxml" />
+    <None Include="Properties\PublishProfiles\SeongWonGame - Web Deploy6.pubxml" />
+    <None Include="Properties\PublishProfiles\SeongWonGame - FTP7.pubxml" />
+    <None Include="Properties\PublishProfiles\SeongWonGame - Web Deploy7.pubxml" />
+    <None Include="Properties\PublishProfiles\SeongWonGame - FTP8.pubxml" />
+    <None Include="Properties\PublishProfiles\SeongWonGame - Web Deploy8.pubxml" />
+    <None Include="Properties\PublishProfiles\SeongWonGame - FTP9.pubxml" />
+    <None Include="Properties\PublishProfiles\SeongWonGame - Web Deploy9.pubxml" />
     <Content Include="requirements.txt" />
     <Content Include="static\script.js" />
     <Content Include="static\style.css" />

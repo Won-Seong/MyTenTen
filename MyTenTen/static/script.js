@@ -5,6 +5,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+function DataBaseConnect() {
+    var Connection = require('tedious').Connection;
+    var config = {
+        server: ''
+    }
+
+
+}
 
 function GameManager(size, InputManager, Actuator) {
     this.size = size; // Size of the grid
@@ -142,7 +150,6 @@ GameManager.prototype.move = function (direction) {
         if (!this.movesAvailable()) {
             this.over = true; // Game over!
         }
-
         this.actuate();
     }
 };
@@ -515,10 +522,6 @@ KeyboardInputManager.prototype.restart = function (event) {
     event.preventDefault();
     this.emit("restart");
 };
-
-
-
-
 
 function Tile(position, value) {
     this.x = position.x;
