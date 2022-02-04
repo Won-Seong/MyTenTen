@@ -4,6 +4,8 @@ It contains the definition of routes and views for the application.
 """
 
 from flask import Flask, render_template, request, redirect, send_file, jsonify
+import DB_Info
+import game_page
 
 app = Flask(__name__)
 
