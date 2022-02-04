@@ -6,6 +6,7 @@ It contains the definition of routes and views for the application.
 # az webapp up --name SWGame --resource-group MyGame --plan ASP-MyGame-9ae5 --location KoreaCentral
 
 from flask import Flask, render_template, request, redirect, send_file, jsonify
+from views import game_page
 import DB_Info
 app = Flask(__name__)
 
@@ -24,6 +25,10 @@ def db_insert() :
     DB_Info.cnxn.commit()
     return
 
+@app.route('/TwoFourZeroEight')
+def two_four_zero_eight():
+    return render_template('two_four_zero_eight.html')
+
 if __name__ == '__main__':
     import os
     HOST = os.environ.get('SERVER_HOST', 'localhost')
@@ -32,6 +37,4 @@ if __name__ == '__main__':
     except ValueError:
         PORT = 5555
 
-    from views import game_page
-    app.register_blueprint(game_page.bp)
     app.run(HOST, PORT)
