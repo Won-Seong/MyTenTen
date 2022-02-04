@@ -3,6 +3,8 @@ This script runs the application using a development server.
 It contains the definition of routes and views for the application.
 """
 
+# az webapp up --name SWGame --resource-group MyGame --plan ASP-MyGame-9ae5 --location KoreaCentral
+
 from flask import Flask, render_template, request, redirect, send_file, jsonify
 import DB_Info
 app = Flask(__name__)
@@ -32,5 +34,4 @@ if __name__ == '__main__':
 
     from views import game_page
     app.register_blueprint(game_page.bp)
-
     app.run(HOST, PORT)

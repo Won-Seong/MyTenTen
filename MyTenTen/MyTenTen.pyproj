@@ -36,6 +36,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\PublishProfiles\SWGame - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\SWGame - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\SWGame - FTP1.pubxml" />
+    <None Include="Properties\PublishProfiles\SWGame - Web Deploy1.pubxml" />
     <Content Include="templates\two_four_zero_eight.html" />
     <None Include="Properties\PublishProfiles\SeongWonGame - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\SeongWonGame - Web Deploy.pubxml" />
