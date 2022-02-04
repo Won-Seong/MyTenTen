@@ -31,9 +31,7 @@
     <Compile Include="DB_Info.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="views\game_page.py">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="game_page.py" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\PublishProfiles\SWGame - FTP.pubxml" />
@@ -71,7 +69,6 @@
     <Folder Include="Properties\" />
     <Folder Include="Properties\PublishProfiles\" />
     <Folder Include="static\" />
-    <Folder Include="views\" />
     <Folder Include="templates\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
