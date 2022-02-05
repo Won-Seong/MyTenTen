@@ -20,8 +20,6 @@ def db_insert() :
     score = request.get_json("score")
     DB_Info.cursor.execute(f"INSERT INTO twofourzeroeight(nickname, score) VALUES ('Lee' , {score})")
     DB_Info.cnxn.commit()
-    DB_Info.cursor.close()
-    DB_Info.cnxn.close()
     return 'hehe'
 
 @app.route('/TwoFourZeroEight')
