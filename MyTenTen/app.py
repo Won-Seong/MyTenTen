@@ -5,7 +5,6 @@ It contains the definition of routes and views for the application.
 
 from flask import Flask, render_template, request, redirect, send_file, jsonify
 import DB_Info
-import game_page
 
 app = Flask(__name__)
 # Make the WSGI interface available at the top level so wfastcgi can get it.
@@ -21,7 +20,9 @@ def db_insert() :
     score = request.get_json("score")
     DB_Info.cursor.execute(f"INSERT INTO twofourzeroeight(nickname, score) VALUES ('Lee' , {score})")
     DB_Info.cnxn.commit()
-    return
+    DB_Info.cursor.close()
+    DB_Info.cnxn.close()
+    return 'hehe'
 
 @app.route('/TwoFourZeroEight')
 def two_four_zero_eight():
@@ -33,5 +34,5 @@ if __name__ == '__main__':
     try:
         PORT = int(os.environ.get('SERVER_PORT', '5555'))
     except ValueError:
-        PORT = 5555
+        PORT = 8000
     app.run(HOST, PORT)
