@@ -140,12 +140,12 @@ GameManager.prototype.move = function (direction) {
 
         if (!this.movesAvailable()) {
             this.over = true; // Game over!
-            $.ajax({
-                type: 'POST',
-                url: '/DB_insert',
-                data: JSON.stringify(this.score),
-                dataType: 'JSON',
-            });
+            //$.ajax({
+            //    type: 'POST',
+            //    url: '/DB_insert',
+            //    data: JSON.stringify(this.score),
+            //    dataType: 'JSON',
+            //});
         }
         this.actuate();
     }

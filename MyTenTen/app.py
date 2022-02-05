@@ -4,7 +4,7 @@ It contains the definition of routes and views for the application.
 """
 
 from flask import Flask, render_template, request, redirect, send_file, jsonify
-import DB_Info
+#import DB_Info
 
 app = Flask(__name__)
 # Make the WSGI interface available at the top level so wfastcgi can get it.
@@ -15,14 +15,14 @@ def hello():
     """Renders a sample page."""
     return render_template('index.html')
 
-@app.route('/DB_insert', methods = ['POST'])
-def db_insert() :
-    score = request.get_json("score")
-    DB_Info.cursor.execute(f"INSERT INTO twofourzeroeight(nickname, score) VALUES ('Lee' , {score})")
-    DB_Info.cnxn.commit()
-    DB_Info.cursor.close()
-    DB_Info.cnxn.close()
-    return 'hehe'
+#@app.route('/DB_insert', methods = ['POST'])
+#def db_insert() :
+#    score = request.get_json("score")
+#    DB_Info.cursor.execute(f"INSERT INTO twofourzeroeight(nickname, score) VALUES ('Lee' , {score})")
+#    DB_Info.cnxn.commit()
+#    DB_Info.cursor.close()
+#    DB_Info.cnxn.close()
+#    return 'hehe'
 
 @app.route('/TwoFourZeroEight')
 def two_four_zero_eight():
