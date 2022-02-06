@@ -4,12 +4,58 @@
 <head>
     <meta charset="utf-8" />
     <title>Welcome to SeongWonGame</title>
+    <link rel="stylesheet" href="../static/my_style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style>
+        .header {
+            background: #f1f1f1;
+            text-align: center;
+            padding: 20px;
+            font-family: Georgia;
+            font-size: 30px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .btn-group .button {
+            border: 2px solid black;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 6px;
+            font-size: 16px;
+            margin: 1px;
+            cursor: pointer;
+            transition-duration: 0.4s;
+            float: left;
+        }
+
+            .btn-group .button:hover {
+                background-color: dodgerblue;
+                color: white;
+            }
+    </style>
 </head>
 <body>
-    <h1>Welcome to SeongWonGame!</h1>
-    <h3>Which game do you want to play?</h3>
-    <button onclick="document.location='TwoFourZeroEight'"> 2048 </button>
+    <div class="header">
+        <h1>Welcome to SeongWonGame!</h1>
+    </div>
+    <div class="block">
+        <form action="\nickname" method="post">
+            <strong><label for="nickname">If you want to record your score, put your nickname below and submit.</label></strong>
+            <input type="text" id="nickname" name="nickname" value="{{nickname}}"><br />
+            <input type="submit" value="Submit"><br />
+        </form>
+    </div>
+    <div class="block">
+        <h3>Which game do you want to play?</h3>
+        <div class="btn-group">
+            <button class="button" onclick="document.location='TwoFourZeroEight'"> 2048 </button>
+            <button class="button" onclick="document.location='TwoFourZeroEightScore'"> Score of 2048 </button>
+        </div>
+    </div>
+    
 </body>
-
 </html>

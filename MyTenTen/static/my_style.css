@@ -1,0 +1,77 @@
+
+table {
+    width: 100%;
+    border: 3px solid black;
+}
+
+th, td {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: dodgerblue;
+    color: white;
+}
+
+body {
+    font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+}
+
+button {
+    border: 2px solid black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 6px;
+    font-size: 16px;
+    padding: 15px 32px;
+    margin: 1px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    float: left;
+}
+
+    button:hover {
+        background-color: dodgerblue;
+        color: white;
+    }
+
+.block {
+    padding: 10px;
+    border-block-start : solid;
+    margin-top: 10px;
+    background: white;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: aliceblue;
+}
+
+input[type=submit] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: dodgerblue;
+    color: white;
+    transition-duration: 0.4s;
+}
+
+    input[type=submit]:hover {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        background-color: coral;
+        color: white;
+        cursor: pointer;
+    }
