@@ -45,7 +45,11 @@
     <div class="block">
         <form action="\nickname" method="post">
             <strong><label for="nickname">If you want to record your score, put your nickname below and submit.</label></strong>
-            <input type="text" id="nickname" name="nickname" value="{{nickname}}"><br />
+            {% if nickname == 'Anonymous' %}
+                <input type="text" id="nickname" name="nickname"><br />
+            {% else %}
+                <input type="text" id="nickname" name="nickname", value="{{nickname}}"><br />
+            {% endif %}
             <input type="submit" value="Submit"><br />
         </form>
     </div>
@@ -53,7 +57,7 @@
         <h3>Which game do you want to play?</h3>
         <div class="btn-group">
             <button class="button" onclick="document.location='TwoFourZeroEight'"> 2048 </button>
-            <button class="button" onclick="document.location='TwoFourZeroEightScore'"> Score of 2048 </button>
+            <button class="button" onclick="document.location = 'TwoFourZeroEightScore'"> Score of 2048 </button>
         </div>
     </div>
     
