@@ -1,7 +1,10 @@
-
+###Table
 
 CREATE TABLE twofourzeroeight(
 	nickname VARCHAR(30) NOT NULL,
 	score INTEGER NOT NULL,
 	play_datetime DATETIME2 NOT NULL DEFAULT current_timestamp
 );
+
+###Insert
+INSERT INTO [dbo].[twofourzeroeight](nickname, score) VALUES ('RR',333)
