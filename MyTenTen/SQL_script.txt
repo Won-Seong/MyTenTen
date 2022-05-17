@@ -8,3 +8,9 @@ CREATE TABLE twofourzeroeight(
 
 ###Insert
 INSERT INTO [dbo].[twofourzeroeight](nickname, score) VALUES ('RR',333)
+
+
+###View
+CREATE VIEW twofourzeroeight_score_view AS
+SELECT nickname, score
+FROM [dbo].[twofourzeroeight];
